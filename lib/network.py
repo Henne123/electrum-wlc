@@ -16,7 +16,7 @@ DEFAULT_PORTS = {'t':'50001', 's':'50002', 'h':'8081', 'g':'8082'}
 
 # Currently no Electrum-WLC servers
 DEFAULT_SERVERS = {
-    'electrum.worldleadcurrencyalliance.com':DEFAULT_PORTS,
+    'welectrum.winc-ev.com':DEFAULT_PORTS,
 }
 
 DISCONNECTED_RETRY_INTERVAL = 60
