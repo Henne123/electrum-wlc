@@ -1,8 +1,8 @@
-# Configuration file for the electrum-frc client
+# Configuration file for the electrum-wlc client
 # Settings defined here are shared across wallets
 #
-# copy this file to /etc/electrum-frc.conf if you want read-only settings
-# copy it into your ~/.electrum-frc/ directory if you want global settings
+# copy this file to /etc/electrum-wlc.conf if you want read-only settings
+# copy it into your ~/.electrum-wlc/ directory if you want global settings
 # that can be rewritten by the client
 
 [client]

@@ -7,14 +7,14 @@
 ;General
 
   ;Name and file
-  Name "Electrum-frc"
-  OutFile "dist/electrum-frc-setup.exe"
+  Name "Electrum-wlc"
+  OutFile "dist/electrum-wlc-setup.exe"
 
   ;Default installation folder
-  InstallDir "$PROGRAMFILES\Electrum-frc"
+  InstallDir "$PROGRAMFILES\Electrum-wlc"
 
   ;Get installation folder from registry if available
-  InstallDirRegKey HKCU "Software\Electrum-frc" ""
+  InstallDirRegKey HKCU "Software\Electrum-wlc" ""
 
   ;Request application privileges for Windows Vista
   RequestExecutionLevel admin
@@ -36,7 +36,7 @@
 
   ;Start Menu Folder Page Configuration
   !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKCU"
-  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\Electrum-frc"
+  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\Electrum-wlc"
   !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Start Menu Folder"
 
   ;!insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
@@ -59,21 +59,21 @@ Section
   SetOutPath "$INSTDIR"
 
   ;ADD YOUR OWN FILES HERE...
-  file /r dist\electrum-frc\*.*
+  file /r dist\electrum-wlc\*.*
 
   ;Store installation folder
-  WriteRegStr HKCU "Software\Electrum-frc" "" $INSTDIR
+  WriteRegStr HKCU "Software\Electrum-wlc" "" $INSTDIR
 
   ;Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
 
-  CreateShortCut "$DESKTOP\Electrum-frc.lnk" "$INSTDIR\electrum-frc.exe" ""
+  CreateShortCut "$DESKTOP\Electrum-wlc.lnk" "$INSTDIR\electrum-wlc.exe" ""
 
   ;create start-menu items
-  CreateDirectory "$SMPROGRAMS\Electrum-frc"
-  CreateShortCut "$SMPROGRAMS\Electrum-frc\Uninstall.lnk" "$INSTDIR\Uninstall.exe" "" "$INSTDIR\Uninstall.exe" 0
-  CreateShortCut "$SMPROGRAMS\Electrum-frc\Electrum-frc.lnk" "$INSTDIR\electrum-frc.exe" "" "$INSTDIR\electrum-frc.exe" 0
+  CreateDirectory "$SMPROGRAMS\Electrum-wlc"
+  CreateShortCut "$SMPROGRAMS\Electrum-wlc\Uninstall.lnk" "$INSTDIR\Uninstall.exe" "" "$INSTDIR\Uninstall.exe" 0
+  CreateShortCut "$SMPROGRAMS\Electrum-wlc\Electrum-wlc.lnk" "$INSTDIR\electrum-wlc.exe" "" "$INSTDIR\electrum-wlc.exe" 0
 
 SectionEnd
 
@@ -95,10 +95,10 @@ Section "Uninstall"
 
   RMDir "$INSTDIR"
 
-  Delete "$DESKTOP\Electrum-frc.lnk"
-  Delete "$SMPROGRAMS\Electrum-frc\*.*"
-  RmDir  "$SMPROGRAMS\Electrum-frc"
+  Delete "$DESKTOP\Electrum-wlc.lnk"
+  Delete "$SMPROGRAMS\Electrum-wlc\*.*"
+  RmDir  "$SMPROGRAMS\Electrum-wlc"
 
-  DeleteRegKey /ifempty HKCU "Software\Electrum-frc"
+  DeleteRegKey /ifempty HKCU "Software\Electrum-wlc"
 
 SectionEnd

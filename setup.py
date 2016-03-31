@@ -13,7 +13,7 @@ version = imp.load_source('version', 'lib/version.py')
 util = imp.load_source('util', 'lib/util.py')
 
 if sys.version_info[:3] < (2, 7, 0):
-    sys.exit("Error: Electrum-frc requires Python version >= 2.7.0...")
+    sys.exit("Error: Electrum-wlc requires Python version >= 2.7.0...")
 
 
 
@@ -26,11 +26,11 @@ if (len(sys.argv) > 1) and (sys.argv[1] == "install"):
         try:
             os.mkdir(usr_share)
         except:
-            sys.exit("Error: cannot write to %s.\nIf you do not have root permissions, you may install Electrum-frc in a virtualenv.\nAlso, please note that you can run Electrum-frc without installing it on your system."%usr_share)
+            sys.exit("Error: cannot write to %s.\nIf you do not have root permissions, you may install Electrum-wlc in a virtualenv.\nAlso, please note that you can run Electrum-wlc without installing it on your system."%usr_share)
 
     data_files += [
-        (os.path.join(usr_share, 'applications/'), ['electrum-frc.desktop']),
-        (os.path.join(usr_share, 'app-install', 'icons/'), ['icons/electrum-frc.png'])
+        (os.path.join(usr_share, 'applications/'), ['electrum-wlc.desktop']),
+        (os.path.join(usr_share, 'app-install', 'icons/'), ['icons/electrum-wlc.png'])
     ]
     if not os.path.exists('locale'):
         os.mkdir('locale')
@@ -39,7 +39,7 @@ if (len(sys.argv) > 1) and (sys.argv[1] == "install"):
             data_files.append((os.path.join(usr_share, 'locale/%s/LC_MESSAGES' % lang), ['locale/%s/LC_MESSAGES/electrum.mo' % lang]))
 
 
-    appdata_dir = os.path.join(usr_share, "electrum-frc")
+    appdata_dir = os.path.join(usr_share, "electrum-wlc")
     data_files += [
         (appdata_dir, ["data/README"]),
         (os.path.join(appdata_dir, "cleanlook"), [
@@ -62,7 +62,7 @@ else:
     data_files = []
 
 setup(
-    name="Electrum-frc",
+    name="Electrum-wlc",
     version=version.ELECTRUM_VERSION,
     install_requires=[
         'slowaes==0.1a1',
@@ -81,7 +81,7 @@ setup(
         'electrum_frc_gui': 'gui',
         'electrum_frc_plugins': 'plugins',
     },
-    scripts=['electrum-frc'],
+    scripts=['electrum-wlc'],
     data_files=data_files,
     py_modules=[
         'electrum_frc.account',
@@ -142,10 +142,10 @@ setup(
         'electrum_frc_plugins.plot',
 
     ],
-    description="Lightweight Freicoin Wallet",
+    description="Lightweight Worldleadcurrency Wallet",
     author="Thomas Voegtlin",
     author_email="thomasv1@gmx.de",
     license="GNU GPLv3",
     url="https://electrum.org",
-    long_description="""Lightweight Freicoin Wallet"""
+    long_description="""Lightweight Worldleadcurrency Wallet"""
 )

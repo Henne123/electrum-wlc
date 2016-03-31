@@ -14,7 +14,7 @@ locale/
 .devlocaltmp/
 *_trial_temp
 packages
-!contrib/electrum-frc-release/helpers/packages/google/
+!contrib/electrum-wlc-release/helpers/packages/google/
 *.gnupg/
 *.local/
 *.bash*

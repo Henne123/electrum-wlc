@@ -4,10 +4,8 @@
 [Desktop Entry]
 Comment=Lightweight Bitcoin Client
 Exec=electrum %u
-GenericName[en_US]=Electrum
 GenericName=Electrum
 Icon=/usr/share/app-install/icons/electrum.png
-Name[en_US]=Electrum Bitcoin Wallet
 Name=Electrum Bitcoin Wallet
 Categories=Network;
 StartupNotify=false
@@ -15,3 +13,4 @@ Terminal=false
 Type=Application
 MimeType=x-scheme-handler/bitcoin;
 
+Name[de_DE]=electrum-wlc.desktop

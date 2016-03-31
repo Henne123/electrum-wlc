@@ -1,6 +1,6 @@
-#### Electrum-FRC Release and Windows builder
+#### Electrum-WLC Release and Windows builder
 
-Create (semi)unattended Electrum-FRC Package Release and  Windows builds on Linux using docker.
+Create (semi)unattended Electrum-WLC Package Release and  Windows builds on Linux using docker.
 
 All you need is docker to build a full release for Linux/OSX (native python) and Windows Setup.exe
 
@@ -50,10 +50,10 @@ since the build script runs directly on the host, writing to the host's filesyst
 and this doesn't provide the mean to specify a docker version,this is not 100% deterministic. 
 A future update will include a vagrant box file to specify a build VM to run the build script.
 
-The script also does a little extra work as we integrate it into Electrum-FRC and our release process.
+The script also does a little extra work as we integrate it into Electrum-WLC and our release process.
 
 There's a lot to apt-get in the Dockerfile, this will take a while to build 
-the docker image. Once the docker image is built on your machine, the Electrum-FRC build 
+the docker image. Once the docker image is built on your machine, the Electrum-WLC build 
 runs quickly. 
 
 
